@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What we provide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1,h3 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            border: 2px solid black;
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .card:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Services Grid Styling */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 0 auto;
+            min-width: 45%;
+            width: 90%;
+            height: 800px;
+        }
+
+        .service-item {
+            position: relative;
+            width: 100%;
+            min-width: 50%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .service-item:hover .service-image {
+            transform: scale(1.1);
+        }
+
+        .service-item:hover .service-overlay {
+            opacity: 1;
+        }
+
+        .service-title {
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        /* achievemnts */
+
+        .achievement {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .achievement.right {
+            flex-direction: row-reverse;
+        }
+        .achievement:hover{
+            border: 2px solid black;
+            transform: scale(1.01);
+        }
+        .achievement-image {
+            flex: 1;
+            max-width: 400px;
+        }
+        .achievement-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.3s ease;
+            border: 4px solid transparent;
+        }
+        /* .achievement-image img:hover {
+            border: 2px solid black;
+            transform: scale(1.05);
+        } */
+        .achievement-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .achievement h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .achievement ul {
+            padding-left: 20px;
+            color: #34495e;
+        }   
+        
+        
+        /* body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        } */
+        
+
+        .footer{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>about kpb support solutions </h1>
+    <!-- <div class="container">
+        <div class="card">
+            <img src="./profile.jpg" alt="Image 1">
+        </div>
+        <div class="card">
+            <img src="./profile.jpg"  alt="Image 2">
+        </div>
+        <div class="card">
+            <img src="./profile.jpg"  alt="Image 3">
+        </div>
+        <div class="card">
+            <img src="./profile.jpg"  alt="Image 4">
+        </div>
+    </div> -->
+
+ <!-- Services Grid -->
+ <div class="services-grid">
+    <div class="service-item">
+        <img src="./vision.jpg" alt="Our Vision" class="service-image">
+        <div class="service-overlay">
+            <div class="service-title">
+                <h2>Our Vision</h2>
+                <p>
+                    Our Vision is to provide you all various solutions regarding your business Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex commodi ipsum eligendi voluptas laboriosam amet eveniet, vitae laborum placeat, illo ullam accusantium optio iure ad pariatur vero harum mollitia.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="service-item">
+        <img src="./mission.jpg" alt="Our Mission" class="service-image">
+        <div class="service-overlay">
+            <div class="service-title">
+                <h2>Our Mission</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui reprehenderit debitis nam explicabo incidunt hic est, beatae quod. Laboriosam, facilis! Ullam distinctio tenetur nostrum beatae voluptatibus, libero saepe quae assumenda.</p>
+            </div>
+        </div>
+    </div>
+    <div class="service-item">
+        <img src="./appraoch.webp" alt="Our Approach" class="service-image">
+        <div class="service-overlay">
+            <div class="service-title">
+                <h2>Our Approach</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur doloremque, dolor numquam earum quam itaque magnam nulla suscipit molestiae temporibus perferendis, ratione blanditiis odit fuga adipisci pariatur quisquam, ipsum at.</p>
+            </div>
+        </div>
+    </div>
+    <div class="service-item">
+        <img src="./service.jpg" alt="Our team" class="service-image">
+        <div class="service-overlay">
+            <div class="service-title">
+                <h2>Our team</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod fuga iste distinctio fugiat? Obcaecati, dolorum cumque. In ex facilis voluptatem possimus! Dolorem veritatis possimus ut architecto aut, deserunt iste velit!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- achievement -->
+<h1>Our performer</h1>
+<div class="container">
+        <div>
+            <div class="card">
+                <img src="./profile.jpg" alt="Image 1">
+            </div>
+            <h3>Shubham mishra</h3>
+        </div>
+        <div>
+            <div class="card">
+                <img src="./profile.jpg" alt="Image 1">
+            </div>
+            <h3>Sweta mishra</h3>
+        </div>
+        <div>
+            <div class="card">
+                <img src="./profile.jpg" alt="Image 1">
+            </div>
+            <h3>Saksham Vasistha</h3>
+        </div>
+        <div>
+            <div class="card">
+                <img src="./profile.jpg" alt="Image 1">
+            </div>
+            <h3>Raj rajput</h3>
+        </div>
+    </div>
+
+    
+<h1>Achievements</h1>
+<div class="container">
+    <div class="achievement">
+        <div class="achievement-image">
+            <img src="./profile.jpg" alt="Innovation Award">
+        </div>
+        <div class="achievement-content">
+            <h2>Innovation Excellence Award</h2>
+            <ul>
+                <li>Developed groundbreaking AI algorithm</li>
+                <li>Increased efficiency by 40%</li>
+                <li>Patent pending for innovative technology</li>
+                <li>Recognized at International Tech Summit</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="achievement right">
+        <div class="achievement-image">
+            <img src="./profile.jpg" alt="Leadership Award">
+        </div>
+        <div class="achievement-content">
+            <h2>Outstanding Leadership Award</h2>
+            <ul>
+                <li>Led team of 50+ to project success</li>
+                <li>Implemented agile methodologies</li>
+                <li>Improved team productivity by 35%</li>
+                <li>Mentored 10 junior employees</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="achievement">
+        <div class="achievement-image">
+            <img src="./profile.jpg" alt="Environmental Award">
+        </div>
+        <div class="achievement-content">
+            <h2>Environmental Sustainability Award</h2>
+            <ul>
+                <li>Reduced company carbon footprint by 30%</li>
+                <li>Implemented company-wide recycling program</li>
+                <li>Partnered with local conservation groups</li>
+                <li>Initiated green energy transition project</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="achievement right">
+        <div class="achievement-image">
+            <img src="./profile.jpg" alt="Customer Service Award">
+        </div>
+        <div class="achievement-content">
+            <h2>Customer Service Excellence</h2>
+            <ul>
+                <li>Achieved 98% customer satisfaction rate</li>
+                <li>Reduced response time by 50%</li>
+                <li>Implemented AI-driven support system</li>
+                <li>Recognized as industry leader in customer care</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+        <h1>footer</h1>
+</div>
+</body>
+</html>
